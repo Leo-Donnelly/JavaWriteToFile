@@ -10,20 +10,6 @@ public class createFile {
 
     public static File myFile = new File(String.valueOf(source));
 
-    public static void checkForFile(){
-        if(myFile.exists()){
-            int choice = JOptionPane.showConfirmDialog(null, "File already exists. Do you want to overwrite it?",
-                    "Confirmation", JOptionPane.YES_NO_OPTION);
-
-            if (choice == JOptionPane.YES_OPTION) {
-                FileCreate();
-            } else if (choice == JOptionPane.NO_OPTION) {
-                JOptionPane.showMessageDialog(null, "Program will now close.");
-                System.exit(0);
-            }
-        }
-    }
-
     public static void FileCreate (){
         try {
             if (myFile.createNewFile()) {
