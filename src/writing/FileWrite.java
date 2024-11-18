@@ -1,22 +1,24 @@
 package writing;
 
-import javax.swing.*;
-import java.io.*;
-import java.nio.file.Files;
+//import javax.swing.*;
+//import java.io.*;
+//import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.util.Scanner;
+//import java.nio.file.StandardCopyOption;
 
 public class FileWrite {
     public static Path source = Paths.get("C:\\Users\\LeoDonnelly\\IdeaProjects\\JavaWriteToFile\\src\\writing\\logins.txt");
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        createFile.createFile();
+        createFile.FileCreate();
     }
 
 //    private static String showFileChooser() {
 //        // Create a JFileChooser instance
-//        JFileChooser fileChooser = new JFileChooser(); CAN YOU KICK ME OUT PLS I DONT WANT TO BREAK IT
+//        JFileChooser fileChooser = new JFileChooser();
 //
 //        // Set the dialog title
 //        fileChooser.setDialogTitle("Select a Folder");
@@ -47,10 +49,10 @@ public class FileWrite {
 //            System.out.println("An error occurred.");
 //            e.printStackTrace();
 //        }
-//        writeToFile.writeToFile();
+//        autoWriteToFile.autoWriteToFile();
 //    }
 
-//    public static void writeToFile(){
+//    public static void autoWriteToFile(){
 //        try(BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\LeoDonnelly\\IdeaProjects\\JavaWriteToFile\\src\\writing\\logins.txt", true))){
 //            int i;
 //            for(i=0; i<=499; i++){

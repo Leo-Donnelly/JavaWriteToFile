@@ -4,12 +4,17 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class writeToFile {
-    public static void writeToFile(){
+import static writing.FileWrite.scanner;
+import static writing.userEnteringStuff.amount;
+
+public class userWriteToFile {
+    public static void userWright(){
+        int loopAmount = Integer.parseInt(amount);
         try(BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\LeoDonnelly\\IdeaProjects\\JavaWriteToFile\\src\\writing\\logins.txt", true))){
             int i;
-            for(i=0; i<=499; i++){
-                writer.write("username"+(i+1)+":password"+(i+1));
+            for(i=0; i<=loopAmount; i++){
+                String input = scanner.next();
+                writer.write(input);
                 writer.newLine();
             }
         }catch (IOException e){
