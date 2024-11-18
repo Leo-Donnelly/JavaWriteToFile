@@ -11,8 +11,7 @@ public class userWriteToFile {
     public static void userWright(){
         int loopAmount = Integer.parseInt(amount);
         try(BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\LeoDonnelly\\IdeaProjects\\JavaWriteToFile\\src\\writing\\logins.txt", true))){
-            int i;
-            for(i=0; i<=loopAmount; i++){
+            for(int i=0; i<loopAmount; i++){
                 String input = scanner.next();
                 writer.write(input);
                 writer.newLine();
